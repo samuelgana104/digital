@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg,#08001f,#30197d );
+
+}
+.contain{
+    width: 60%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 20px;
+    position: relative;
+    
+    
+}
+.contain::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(161, 143, 177);
+    bottom: -50px;
+    border-radius: 50%;
+    
+    right: -50px;
+
+}
+.contain::before{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(113, 141, 218);
+    top: -59px;
+    
+    
+    left: -50px;
+
+}
+.time{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(40px);
+    background-color:rgba(235,0,255,0.11) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+span{
+    font-size: 4em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+span::after{
+    
+    position: absolute;
+    font-size: 18px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#hr::after{
+    content: 'hour';
+}
+#min::after{
+    content: 'minute';
+}
+
+#sec::after{
+    content: 'second';
+}
